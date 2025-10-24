@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virtus.io · Simulador de Inscripción</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Simulador de Inscripción · Virtus.io</h1>
+    <p class="sub">Cursos Web3: agrega cursos, elegí cuotas y calculá total.
+        By: JP & HSC
+    </p>
+  </header>
+
+  <main class="container grid">
+    <!-- Catálogo -->
+    <section>
+      <h2>Catálogo</h2>
+      <div id="catalogo" class="grid"></div>
+    </section>
+
+    <!-- Carrito + Resumen -->
+    <section>
+      <h2>Carrito</h2>
+
+      <!-- Agregar por ID/Cantidad (input controlado) -->
+      <form id="form-agregar" autocomplete="off" class="card form">
+        <label>
+          ID Curso
+          <input type="number" id="input-id" min="1" required />
+        </label>
+        <label>
+          Cantidad
+          <input type="number" id="input-cant" min="1" value="1" required />
+        </label>
+        <button type="submit">Agregar</button>
+        <small id="msg-form" class="msg"></small>
+      </form>
+
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Curso</th><th>Precio</th><th>Cant.</th><th>Subtotal</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-carrito"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="right">Subtotal</td>
+            <td id="subtotal">$0</td><td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="right">Descuento (volumen)</td>
+            <td id="descuento">$0</td><td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="right">Recargo por cuotas</td>
+            <td id="recargo">$0</td><td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="right total-row">TOTAL</td>
+            <td id="total" class="total-row">$0</td><td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Selección de cuotas -->
+      <div class="card cuotas">
+        <span>Cuotas:</span>
+        <label><input type="radio" name="cuotas" value="1" checked /> 1 cuota</label>
+        <label><input type="radio" name="cuotas" value="3" /> 3 cuotas</label>
+        <small class="hint">3 cuotas suman 15% de recargo.</small>
+      </div>
+
+      <!-- Acciones -->
+      <div class="acciones">
+        <button id="btn-vaciar">Vaciar</button>
+        <button id="btn-guardar">Guardar en LocalStorage</button>
+        <button id="btn-cargar">Cargar de LocalStorage</button>
+      </div>
+
+      <!-- Resumen textual (DOM, no alert/console) -->
+      <div id="resumen" class="card resumen"></div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>Certificado: los cursos pagos otorgan certificado NFT verificable al completar.</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
