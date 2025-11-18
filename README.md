@@ -1,37 +1,71 @@
-#Virtus.io – Web3 Course Enrollment Simulator
+Virtus.io — Web3 Course Enrollment Simulator 🎓💻
 
-An interactive simulator to explore Web3 courses, build a custom enrollment selection, calculate discounts, apply payment plans, and generate a final cost summary. Fully dynamic UI rendered with JavaScript, using JSON data, DOM manipulation, event handling, and LocalStorage.
+Virtus.io is an interactive simulator that allows users to explore Web3 courses, build a custom enrollment selection, apply discounts, choose installment plans, and view a dynamically calculated final cost — all rendered in-browser using vanilla JavaScript.
 
-**🚀 Features
+⚙️ Built With
 
--Dynamic course catalog loaded from cursos.json (JSON via Fetch API)
+HTML5
 
--Interactive cart with quantity control, remove actions, and real-time updates
+CSS3
 
--Automatic calculation of subtotal, volume discounts (≥3 courses), and installment surcharges
+JavaScript (ES6+)
 
--Toast notifications (Toastify) and confirmation modals (SweetAlert2)
+SweetAlert2 (modals)
 
--Data persistence with LocalStorage (save & load cart and payment options)
+Toastify.js (notifications)
 
--Fully rendered in HTML via JavaScript (no alerts or console outputs)
+Fetch API (JSON data loading)
 
-**🛠 Tech Stack
+LocalStorage (state persistence)
 
--HTML5 + CSS3
+🛠️ Core Features
 
--JavaScript (ES6)
+📦 Dynamic course catalog loaded from external cursos.json (Fetch API)
 
--Fetch API
+🛒 Interactive cart with quantity updates, remove buttons, and real-time totals
 
--DOM Manipulation
+💸 Automatic calculation of discounts (≥3 courses) and installment surcharges
 
--LocalStorage
+🔔 Toast notifications (Add, Remove, Save, Load, etc.)
 
--SweetAlert2 & Toastify.js
+🧾 Full summary rendered in DOM (no alerts/console in final version)
 
--JSON (external data file)
+💾 Save and load shopping state using LocalStorage
 
-## 🖼️ Preview
+🧹 Clean structure with functions, arrays, objects, and DOM modularity
 
-👉 [Access here](https://hsc2121.github.io/virtus-javascript/)
+📁 Project Structure
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── data/
+│   └── cursos.json
+├── assets/
+│   └── virtus.jpg
+└── README.md
+
+🧪 Live Demo (GitHub Pages)
+
+👉 (Add your GitHub Pages link once deployed)
+https://hsc2121.github.io/virtus.io-javascript/
+
+🧠 How It Works
+
+Explore available Web3 courses in the catalog
+
+Add courses by clicking or via ID input form
+
+Adjust quantities directly in the cart table
+
+Select payment type (1 or 3 installments) and auto-apply surcharge
+
+Save or restore selections via LocalStorage
+
+View a full summary with totals, units, discounts, and installments
+
+👨‍💻 Author
+
+Hernán Cortacans
+Virtus Strategic Labs
