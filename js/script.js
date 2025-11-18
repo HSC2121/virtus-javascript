@@ -2,8 +2,8 @@
 // DOM + Eventos + Storage + Fetch(JSON) + SweetAlert2 + Toastify
 
 // --------- Configuración general ---------
-const DESCUENTO_VOL = 0.1;        // 10% si unidades >= 3
-const RECARGO_3_CUOTAS = 0.15;    // 15% en 3 cuotas
+const DESCUENTO_VOL = 0.1; // 10% si unidades >= 3
+const RECARGO_3_CUOTAS = 0.15; // 15% en 3 cuotas
 const OPCIONES_CUOTAS = [1, 3];
 const STORAGE_KEY = "virtus_simulador_v2";
 const DATA_URL = "data/cursos.json";
@@ -163,7 +163,9 @@ function render() {
       <td>${item.nombre}</td>
       <td>${p}</td>
       <td>
-        <input type="number" min="1" value="${item.cantidad}" class="inp-cant" data-id="${item.id}" />
+        <input type="number" min="1" value="${
+          item.cantidad
+        }" class="inp-cant" data-id="${item.id}" />
       </td>
       <td>${item.precioUSD === 0 ? "USD 0" : `USD ${sub}`}</td>
       <td><button class="btn-del" data-id="${item.id}">✕</button></td>
@@ -182,9 +184,17 @@ function render() {
   const lines = carrito.map((it) => `• ${it.nombre} x${it.cantidad}`);
   resumen.innerHTML = `
     <h3>Resumen</h3>
-    <p>${lines.length ? lines.join("<br/>") : "No hay cursos en el carrito."}</p>
-    <p><strong>Unidades:</strong> ${r.unidades} · <strong>Cuotas:</strong> ${cuotasSeleccionadas}</p>
-    <p><em>${r.aplicaDesc ? "Aplica descuento por volumen (≥3)." : "No aplica descuento por volumen."}
+    <p>${
+      lines.length ? lines.join("<br/>") : "No hay cursos en el carrito."
+    }</p>
+    <p><strong>Unidades:</strong> ${
+      r.unidades
+    } · <strong>Cuotas:</strong> ${cuotasSeleccionadas}</p>
+    <p><em>${
+      r.aplicaDesc
+        ? "Aplica descuento por volumen (≥3)."
+        : "No aplica descuento por volumen."
+    }
     ${r.aplicaRecargo ? " · Aplica recargo por 3 cuotas." : ""}</em></p>
   `;
 }
