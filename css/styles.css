@@ -28,3 +28,19 @@ button:hover { background: #f3f4f6; }
 .acciones { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; }
 .resumen { margin-top: .8rem; background: #f8fafc; }
 .resumen h3 { margin-top: 0; }
+
+/* Banner  */
+.banner {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  

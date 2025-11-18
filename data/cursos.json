@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nombre": "Intro a Web3", "precioUSD": 0 },
+    { "id": 2, "nombre": "DeFi Essentials", "precioUSD": 80 },
+    { "id": 3, "nombre": "Smart Contracts", "precioUSD": 120 },
+    { "id": 4, "nombre": "NFTs y DAOs", "precioUSD": 100 }
+  ]
+  
